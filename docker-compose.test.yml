@@ -19,6 +19,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
+      - /usr/src/app/node_modules # To prevent overwriting the volume of the host
       - .:/usr/src/app
     env_file:
       - .env.test
